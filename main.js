@@ -21,3 +21,30 @@ const getName = function (city, state) {
 
 //PolyFill
 //--Write own implementation of functions
+
+
+
+
+//polyfill for bind
+
+// Function.prototype.myBind = function (scope, ...args) {
+//   scope._this = this;
+//   return function (...args2) {
+//     scope._this(...args, ...args2);
+//   };
+// };
+
+// Function.prototype.myCall = function (scope, ...args) {
+//   scope._this = this;
+//   return scope._this(...args);
+// };
+
+// Function.prototype.myApply = function (scope, args) {
+//   scope._this = this;
+//   return scope._this(...args);
+// };
+
+// const polyBind = getName.myBind(data, "tuticorin", "TamilNadu");
+// polyBind();
+// console.log(getName.myCall(data, "tut", "tam"));
+// console.log(getName.myApply(data, ["tut", "tam"]));
