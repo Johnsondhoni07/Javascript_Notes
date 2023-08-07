@@ -1,13 +1,23 @@
 const data = {
-  firstName: "Johnson",
-  lastname: "Deva",
+  firstName: "johnson",
+  lastName: "Deva",
 };
 
-const getName = () => {
+const getName = function (city, state) {
   console.log(
-    "first name is" + this.firstName + "and last name is" + this.lastname
+    `I am ${this.firstName + " " + this.lastName} from ` + city + " " + state
   );
 };
 
-const fuc = getName.bind(data);
-console.log(fuc);
+//Call Method  invokes a function directly by passing a reference for this method
+// getName.call(data, "Tuticorin", "Tamil Nadu");
+
+//Similar to call were the function parameter are in array
+// getName.apply(data, ["Tuticorin", "Tamil Nadu"]);
+
+//Bind method returns a function which is invoked later
+// const bindReturn = getName.bind(data, "Tuticorin", "Tamil Nadu");
+// bindReturn();
+
+//PolyFill
+//--Write own implementation of functions
