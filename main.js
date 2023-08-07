@@ -22,9 +22,6 @@ const getName = function (city, state) {
 //PolyFill
 //--Write own implementation of functions
 
-
-
-
 //polyfill for bind
 
 // Function.prototype.myBind = function (scope, ...args) {
@@ -48,3 +45,48 @@ const getName = function (city, state) {
 // polyBind();
 // console.log(getName.myCall(data, "tut", "tam"));
 // console.log(getName.myApply(data, ["tut", "tam"]));
+
+//curring
+// function multiply(x, y) {
+//   return x * y;
+// }
+
+// console.log(multiply(3, 2));
+// const multiplybyTwo = multiply.myBind(this, 2);
+// console.log(multiplybyTwo(10));
+
+// function multiply(x) {
+//   return function (y) {
+//     return x * y;
+//   };
+// }
+
+// let multiplybyTwo = multiply(2);
+// console.log(multiplybyTwo(3));
+// console.log(multiply(2)(1))
+
+// normal Script tag
+// html parsing > fetching script > execution script >HTMl parsing
+
+//Async
+//html parsing & fetchScript -> execution -> html parsing
+
+//Defer
+//Html parsing & fetch Script -> html Parsing -> execution
+
+//Debouncing
+// Debouncing is a technique to stop time consuming
+// tasks do not fire to often which reduces app performance
+let invokes = 0;
+const getData = function () {
+  let text = document.getElementById("myText").value;
+  console.log("fetched", invokes++, text);
+};
+
+let interval;
+const debounce = function () {
+  clearInterval(interval);
+  interval = setTimeout(() => {
+    getData();
+  }, 400);
+};
