@@ -77,16 +77,16 @@ const getName = function (city, state) {
 //Debouncing
 // Debouncing is a technique to stop time consuming
 // tasks do not fire to often which reduces app performance
-let invokes = 0;
-const getData = function () {
-  let text = document.getElementById("myText").value;
-  console.log("fetched", invokes++, text);
-};
+// let invokes = 0;
+// const getData = function () {
+//   let text = document.getElementById("myText").value;
+//   console.log("fetched", invokes++, text);
+// };
 
-let interval;
-const debounce = function () {
-  clearInterval(interval);
-  interval = setTimeout(() => {
-    getData();
-  }, 400);
-};
+// let interval;
+// const debounce = function () {
+//   clearInterval(interval);
+//   interval = setTimeout(() => {
+//     getData();
+//   }, 400);
+// };
