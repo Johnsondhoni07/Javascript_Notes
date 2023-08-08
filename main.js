@@ -90,3 +90,24 @@ const getName = function (city, state) {
 //     getData();
 //   }, 400);
 // };
+
+//Throttling
+
+// const throttle = (func, limit) => {
+//   let makeCall = true;
+//   return function () {
+//     if (makeCall) {
+//       func();
+//       makeCall = false;
+//       setTimeout(() => {
+//         makeCall = true;
+//       }, limit);
+//     }
+//   };
+// };
+
+// let i = 0;
+// const betterThrottle = throttle(() => {
+//   console.log("resize", i++);
+// }, 500);
+// window.addEventListener("resize", betterThrottle);
