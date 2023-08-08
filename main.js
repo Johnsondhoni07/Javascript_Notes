@@ -147,3 +147,50 @@ const getName = function (city, state) {
 
 // Event Delegation
 // process of handling events  improve performance
+
+// Promises
+// const checkEvenNumber = (num, limit = 0) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       num % 2 == 0
+//         ? resolve(`${num} in Even`)
+//         : reject(new Error(`${num} is Odd`));
+//     }, limit);
+//   });
+// };
+
+//promise all will return success response in array if all are resolved if one rejected it will return err
+// Promise.all([
+//   checkEvenNumber(2),
+//   checkEvenNumber(21, 2000),
+//   checkEvenNumber(11, 1000),
+// ])
+//   .then((res) => console.log(res, "res"))
+//   .catch((err) => console.log(err, "er"));
+
+//Promise. race will return the first fullfilled promise whether is resolved or rejected
+// Promise.race([
+//   checkEvenNumber(2, 2000),
+//   checkEvenNumber(22, 1000),
+//   checkEvenNumber(11, 1000),
+// ])
+//   .then((res) => console.log(res, "res race"))
+//   .catch((err) => console.log(err, "er race"));
+
+//promise.any return first resolved promises if all promises rejected it return all rejected
+// Promise.any([
+//   checkEvenNumber(21),
+//   checkEvenNumber(21, 1000),
+//   checkEvenNumber(11, 1000),
+// ])
+//   .then((res) => console.log(res, "res any"))
+//   .catch((err) => console.log(err, "er any"));
+
+//promises.allSettled return all status of promises whether it is resolved or rejected
+// Promise.allSettled([
+//   checkEvenNumber(21),
+//   checkEvenNumber(22, 5000),
+//   checkEvenNumber(10),
+// ])
+//   .then((res) => console.log(res, "res any"))
+//   .catch((err) => console.log(err, "er any"));
