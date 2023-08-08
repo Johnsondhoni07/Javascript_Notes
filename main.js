@@ -111,3 +111,34 @@ const getName = function (city, state) {
 //   console.log("resize", i++);
 // }, 500);
 // window.addEventListener("resize", betterThrottle);
+
+//Debouncing vs Throttling
+//Debouncing is a technique to fire a task on a continuos event after certain interval between the event
+//throttling is technique to fire a task on certain interval when event occurs
+
+//Event Propagation
+document.querySelector("#grandparent").addEventListener(
+  "click",
+  (e) => {
+    console.log("grandParent Clicked");
+  },
+  true
+);
+document.querySelector("#parent").addEventListener(
+  "click",
+  (e) => {
+    console.log("Parent Clicked");
+  },
+  true
+);
+document.querySelector("#child").addEventListener(
+  "click",
+  (e) => {
+    console.log("Child Clicked");
+  },
+  true
+);
+
+// Event Progation
+//   1 - Bubbling(Child to parent)
+//   2 - Capturing(Parent to child) or Trickling
