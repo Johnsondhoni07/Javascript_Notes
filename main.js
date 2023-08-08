@@ -116,29 +116,34 @@ const getName = function (city, state) {
 //Debouncing is a technique to fire a task on a continuos event after certain interval between the event
 //throttling is technique to fire a task on certain interval when event occurs
 
-//Event Propagation
-document.querySelector("#grandparent").addEventListener(
-  "click",
-  (e) => {
-    console.log("grandParent Clicked");
-  },
-  true
-);
-document.querySelector("#parent").addEventListener(
-  "click",
-  (e) => {
-    console.log("Parent Clicked");
-  },
-  true
-);
-document.querySelector("#child").addEventListener(
-  "click",
-  (e) => {
-    console.log("Child Clicked");
-  },
-  true
-);
+// Event Propagation
+// document.querySelector("#grandparent").addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("grandParent Clicked");
+//   },
+//   false
+// );
+// document.querySelector("#parent").addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Parent Clicked");
+//   },
+//   true
+// );
+// document.querySelector("#child").addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Child Clicked");
+//   },
+//   true
+// );
 
 // Event Progation
 //   1 - Bubbling(Child to parent)
 //   2 - Capturing(Parent to child) or Trickling
+// Default is Bubbling adding boolean to true in eventListener makes capturing
+// Event propagation is cycle bubbling is followed by capturing
+
+// Event Delegation
+// process of handling events  improve performance

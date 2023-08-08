@@ -5,11 +5,11 @@ div {
   border: 1px solid black;
 }
 #grandparent {
-  background: red;
+  background: rgb(201, 136, 136);
 }
 div #parent {
-  background: green;
+  background: rgb(156, 185, 156);
 }
 #child {
-  background: pink;
+  background: rgb(131, 114, 117);
 }
